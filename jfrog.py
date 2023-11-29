@@ -5,7 +5,7 @@ import subprocess
 
 def jfrogUpload() :
     # define the url file path, and authentication credentials and change ur IP Address
-    url = 'http://<IP Address>:8082/artifactory/example-repo-local/kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar'
+    url = 'http://54.164.49.22:8082/artifactory/example-repo-local/kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar'
     file_path = '/var/lib/jenkins/workspace/JenTDh/target/kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar'
     username = 'admin'
     password = 'password' #replace 'your password with ur actual password'
