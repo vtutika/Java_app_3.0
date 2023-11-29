@@ -63,21 +63,22 @@ pipeline{
                }
             }
        }
-        stage('upload artifacts : Jfrog'){
-         when { expression {  params.action == 'create' } }
-            steps{
-               script{
-                   
-                   jfrog()
-               }
-            }
-        }
+        
         stage('Maven Build : maven'){
          when { expression {  params.action == 'create' } }
             steps{
                script{
                    
                    mvnBuild()
+               }
+            }
+        }
+        stage('upload artifacts : Jfrog'){
+         when { expression {  params.action == 'create' } }
+            steps{
+               script{
+                   
+                   jfrog()
                }
             }
         }
