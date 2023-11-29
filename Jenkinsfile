@@ -73,12 +73,12 @@ pipeline{
                }
             }
         }
-        stage('upload artifacts : Jfrog'){
+        stage('upload artifact to Jfrog'){
          when { expression {  params.action == 'create' } }
             steps{
                script{
                    
-                   jfrog()
+                   sh 'curl -X PUT -u admin:password -T /var/jenkins/workspace/java-3.0/target/kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar "http://54.164.49.22/:8082/artifactory/example-repo-local/kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar'
                }
             }
         }
