@@ -8,7 +8,7 @@ def jfrogUpload() :
     url = 'http://54.164.49.22:8082/artifactory/example-repo-local/kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar'
     file_path = '/var/lib/jenkins/workspace/JenTDh/target/kubernetes-configmap-reload-0.0.1-SNAPSHOT.jar'
     username = 'admin'
-    password = 'password' #replace 'your password with ur actual password'
+    password = 'Welcome@1' #replace 'your password with ur actual password'
 
     #send the PUT request with authentication and file upload
     with open(file_path, 'rb') as file:
